@@ -48,26 +48,26 @@ A modern **money sharing web application** built using **Flask**, designed for s
 
 1. **Clone the repository:**
 
-git clone https://github.com/yourusername/money-sharing-app.git
-cd money-sharing-app
+   git clone https://github.com/yourusername/money-sharing-app.git
+   cd money-sharing-app
 
 2. **Create a virtual environment:**
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+   python -m venv venv<br>
+   source venv/bin/activate   # Linux/Mac<br>
+   venv\Scripts\activate      # Windows<br>
 
 3. **Install dependencies:**
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. **Run the app:**
 
-python app.py
+   python app.py
 
 5. **Open in browser:**
 
-Go to http://127.0.0.1:5000
+   Go to http://127.0.0.1:5000
 
 **Usage**
 
@@ -86,20 +86,19 @@ Go to http://127.0.0.1:5000
 **Project Structure**
 money-sharing-app/
 │
-├── templates/           # HTML templates
-│   ├── home.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── profile.html
-│   ├── about.html
-│   ├── services.html
-│   └── contact.html
+├── templates/           # HTML templates<br>
+│   ├── home.html<br>
+│   ├── login.html<br>
+│   ├── signup.html<br>
+│   ├── profile.html<br>
+│   ├── about.html<br>
+│   ├── services.html<br>
+│   └── contact.html<br>
 │
-├── static/              # CSS, images
-│   └── style.css
-│
-├── app.py               # Flask application           
-└── README.md
+├── static/              # CSS, images<br>
+│   └── style.css<br>
+├── app.py               # Flask application<br>           
+└── README.md<br>
 
 **Notes**
 
