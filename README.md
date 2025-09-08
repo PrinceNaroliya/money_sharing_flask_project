@@ -69,21 +69,25 @@ A modern **money sharing web application** built using **Flask**, designed for s
 
    Go to http://127.0.0.1:5000
 
-**Usage**
+---
 
-1. Signup: Create a new account and get a default ₹1000 balance.
+## Usage
 
-2. Login: Access your dashboard and profile.
+1. **Signup**: Create a new account and get a default ₹1000 balance.
 
-3. Send Money: Enter recipient details, amount, and confirm.
+2. **Login**: Access your dashboard and profile.
 
-4. Transaction Alerts: See real-time confirmation messages.
+3. **Send Money**: Enter recipient details, amount, and confirm.
 
-5. Profile Search: Search for other users using the search bar.
+4. **Transaction Alerts**: See real-time confirmation messages.
 
-6. Transaction History: Track all past transactions in your profile page.
+5. **Profile Search**: Search for other users using the search bar.
 
-**Project Structure**
+6. **Transaction History**: Track all past transactions in your profile page.
+   
+---
+
+## Project Structure
 money-sharing-app/
 │
 ├── templates/           # HTML templates<br>
@@ -100,12 +104,16 @@ money-sharing-app/
 ├── app.py               # Flask application<br>           
 └── README.md<br>
 
-**Notes**
+---
 
-* Dummy Currency: This project is for learning purposes only, using fake balances.
+## Notes
 
-* No JavaScript: Entire functionality is handled with Python & Flask.
+- **Dummy Currency**: This project is for learning purposes only, using fake balances.
 
-* Alerts: Transaction alerts are implemented using HTML/CSS styles.
+- **No JavaScript**: Entire functionality is handled with Python & Flask.
+
+- **Alerts**: Transaction alerts are implemented using HTML/CSS styles.
+  
+---
 
 This project is **beginner-friendly**, designed to help learners explore **Python, Flask, and web development** through a hands-on, practical experience.
