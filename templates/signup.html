@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-start" style="margin-top: 100px; min-height: 100vh;">
+  <div class="card shadow p-4" style="width: 400px; border-radius: 12px;">
+
+    <h2 class="text-center mb-4">Sign up</h2>
+    <form action="{{url_for('signup')}}" method="post">
+      
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Enter username.." required>
+      </div>
+
+      <div class="mb-3">
+        <input type="password" name="password" class="form-control" placeholder="Enter password.." required>
+      </div>
+
+      {% if error_message %}
+      <div class="alert alert-danger py-2">
+        {{ error_message }}
+      </div>
+      {% endif %}
+
+      <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center">
+        Sign up
+      </button>
+
+
+      <p class="text-center mt-3 mb-0" >
+        Don’t have an account? <a id="already" href="{{url_for('login')}}">Login</a>
+      </p>
+    </form>
+  </div>
+</div>
+{% endblock %}

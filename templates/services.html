@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Coming Soon{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+  <div class="text-center">
+    
+    <!-- Icon -->
+    <div class="mb-4">
+      <i class="fa-solid fa-circle-info text-primary" style="font-size: 60px;"></i>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="mb-3">Nothing to See Here (Yet)</h2>
+
+    <!-- Subtitle -->
+    <p class="text-muted mb-4">
+      This page is under construction. We’re working hard to bring you something amazing very soon 🚀
+    </p>
+
+    <!-- Back Button -->
+    <a href="{{ url_for('home') }}" class="btn btn-outline-primary">
+      <i class="fa-solid fa-house me-2"></i> Back to Home
+    </a>
+  </div>
+</div>
+{% endblock %}

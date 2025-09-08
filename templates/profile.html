@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card shadow-lg p-4" style="max-width: 450px; width: 100%; border-radius: 15px;">
+
+    <div class="text-center mb-4">
+      <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center mx-auto mb-3" 
+           style="width: 80px; height: 80px; font-size: 30px; font-weight: bold;">
+        {{ user.name[0]|upper }}
+      </div>
+      <h3 class="mb-0">{{ user.name }}</h3>
+      <small class="text-muted">Account Holder</small>
+    </div>
+
+    <ul class="list-group list-group-flush mb-3">
+      <li class="list-group-item d-flex justify-content-between">
+        <span><i class="fa-solid fa-id-card me-2"></i> Account Number</span>
+        <strong>{{ user.account_number }}</strong>
+      </li>
+      <li class="list-group-item d-flex justify-content-between">
+        <span><i class="fa-solid fa-wallet me-2"></i> Balance</span>
+        <strong>₹ {{ user.balance }}</strong>
+      </li>
+    </ul>
+
+    <div class="d-flex justify-content-between">
+      <a href="{{ url_for('send_money') }}" class="btn btn-success w-45">Send Money</a>
+      <a href="{{ url_for('logout') }}" class="btn btn-danger w-45">Logout</a>
+    </div>
+  </div>
+</div> 
+
+    {# Sent Transactions #}
+    {% if not hide_transactions %}
+  {% if sent_txns %}
+  <div class="card mt-4 shadow-sm">
+    <div class="card-header bg-success text-white">Sent Transactions</div>
+    <ul class="list-group list-group-flush">
+      {% for txn in sent_txns %}
+        <li class="list-group-item">
+          Sent ₹{{ txn.amount }} to {{ txn.receiver }} on {{ txn.timestamp.strftime('%d %b %Y %H:%M') }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if received_txns %}
+  <div class="card mt-4 shadow-sm">
+    <div class="card-header bg-info text-white">Received Transactions</div>
+    <ul class="list-group list-group-flush">
+      {% for txn in received_txns|reverse %}
+        <li class="list-group-item">
+          Received ₹{{ txn.amount }} from {{ txn.sender }} on {{ txn.timestamp.strftime('%d %b %Y %H:%M') }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+{% endif %}
+
+
+{% endblock %}
